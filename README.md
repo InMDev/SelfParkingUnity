@@ -4,8 +4,10 @@ Using Genetic Evolutionary Algorithm for self parallel parking in Unity from scr
 # The idea
 1. Create movement to the car: engine & steering wheel
 2. Give sensor that calculate distance near the car
-3. Give Brain to the car that takes in the sensor values and outputs the engine & steering wheel strength
-4. Run the Genetic Algorithm (GA) for training
+   
+   ![Alt Text](ReadMeAsset/Sensor.gif)
+4. Give Brain to the car that takes in the sensor values and outputs the engine & steering wheel strength
+5. Run the Genetic Algorithm (GA) for training
 
 # Genetic Algorithm (GA)
 1. Initialization: Create diverse sets of genes representing 9 initial weights for engine and steering (using a 10-bit structure: 1 sign bit, 4 exponent bits, and 5 mantissa bits).

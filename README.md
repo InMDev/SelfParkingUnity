@@ -18,3 +18,5 @@ Using Genetic Evolutionary Algorithm for self parallel parking in Unity from scr
 
 Iteration: Repeat steps 2 to 5 until a stopping condition is met, such as reaching a certain number of generations or achieving the desired proximity to the parking spot (e.g., within 1 meter). If the condition is met, stop; otherwise, continue iterating to refine the car's self-parking abilities.
 
+Credit:
+3D Model: https://assetstore.unity.com/packages/3d/vehicles/land/arcade-free-racing-car-161085#publisher

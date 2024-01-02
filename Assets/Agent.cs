@@ -30,6 +30,7 @@ public class Agent : MonoBehaviour
 
     public TextMeshProUGUI lossUIText;
 
+    public int[] currentGenome = new int[180];
     public float[] sensorValues = new float[8];
     public float[] engineWeights = new float[9];
     public float[] steeringWeights = new float[9];
@@ -44,7 +45,6 @@ public class Agent : MonoBehaviour
     public Transform wheelBackLeftTarget;
     public Transform wheelBackRightTarget;
 
-    public bool isRandomGenome = false;
     public float loss;
 
     // Define enum for MuscleSignal
@@ -211,37 +211,85 @@ public class Agent : MonoBehaviour
 
     }
 
-    float fitnessFunction()
+    public float fitnessFunction()
     {
         return 1 / (1 + lossFunction());
     }
 
-    void Start()
+    public void RandomInitialize()
     {
-        if (isRandomGenome)
+        int[] RandomGenome = new int[180];
+        for (int i = 0; i < RandomGenome.Length; i++)
         {
-            int[] RandomGenome = new int[180];
-            for (int i = 0; i < RandomGenome.Length; i++)
-            {
-                RandomGenome[i] = UnityEngine.Random.Range(0, 2);
-            }
+            RandomGenome[i] = UnityEngine.Random.Range(0, 2);
+        }
 
-            //Convert genome to floating point
-            float[] floatingPointGenome = convertGenomeToFloatingPoint(RandomGenome);
+        currentGenome = RandomGenome;
 
-            //The first 9 floatingPoint is engine weights
-            for (int j = 0; j < 9; j++)
-            {
-                engineWeights[j] = floatingPointGenome[j];
-            }
+        //Convert genome to floating point
+        float[] floatingPointGenome = convertGenomeToFloatingPoint(RandomGenome);
 
-            // //The next 9 floatingPoint is steering weights
-            for (int j = 9; j < 18; j++)
+        //The first 9 floatingPoint is engine weights
+        for (int j = 0; j < 9; j++)
+        {
+            engineWeights[j] = floatingPointGenome[j];
+        }
+
+        // //The next 9 floatingPoint is steering weights
+        for (int j = 9; j < 18; j++)
+        {
+            steeringWeights[j - 9] = floatingPointGenome[j];
+        }
+    }
+
+    public void setGenome(int[] Genome)
+    {
+        currentGenome = Genome;
+
+        //Convert genome to floating point
+        float[] floatingPointGenome = convertGenomeToFloatingPoint(Genome);
+
+        //The first 9 floatingPoint is engine weights
+        for (int j = 0; j < 9; j++)
+        {
+            engineWeights[j] = floatingPointGenome[j];
+        }
+
+        // //The next 9 floatingPoint is steering weights
+        for (int j = 9; j < 18; j++)
+        {
+            steeringWeights[j - 9] = floatingPointGenome[j];
+        }
+    }
+
+    public void Mutate(float probability)
+    {
+        for (int i = 0; i < currentGenome.Length; i++)
+        {
+            if (UnityEngine.Random.Range(0f, 1f) < probability)
             {
-                steeringWeights[j - 9] = floatingPointGenome[j];
+                currentGenome[i] = UnityEngine.Random.Range(0, 2);
             }
         }
 
+        //Convert genome to floating point
+        float[] floatingPointGenome = convertGenomeToFloatingPoint(currentGenome);
+
+        //The first 9 floatingPoint is engine weights
+        for (int j = 0; j < 9; j++)
+        {
+            engineWeights[j] = floatingPointGenome[j];
+        }
+
+        // //The next 9 floatingPoint is steering weights
+        for (int j = 9; j < 18; j++)
+        {
+            steeringWeights[j - 9] = floatingPointGenome[j];
+        }
+    }
+
+    void Start()
+    {
         // Start receiving brain signals every 100ms (using InvokeRepeating)
         InvokeRepeating(nameof(ReceiveBrainSignal), 0f, 0.1f);
     }

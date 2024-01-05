@@ -4,25 +4,26 @@ using UnityEngine;
 
 public class Sensor : MonoBehaviour
 {
-    //Write a public script that return the distance between the current object and the rigidbody infront of it
     public float distance;
     public float maxDistance = 10f;
     public float minDistance = 0f;
+    public float smoothTime = 0.3F;
+    private float velocity = 0.0F;
 
     public float GetDistance()
     {
-        //Create a raycast that will shoot a ray from the current object to the rigidbody infront of it
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, maxDistance))
         {
-            //If the raycast hit something, return the distance between the current object and the rigidbody infront of it
-            distance = hit.distance;
+            // Smoothly transition to the new distance
+            distance = Mathf.SmoothDamp(distance, hit.distance, ref velocity, smoothTime);
             return distance;
         }
         else
         {
-            //If the raycast did not hit anything, return the max distance
-            return maxDistance;
+            // Smoothly transition to the max distance
+            distance = Mathf.SmoothDamp(distance, maxDistance, ref velocity, smoothTime);
+            return distance;
         }
     }
 }

@@ -149,7 +149,7 @@ public class PrometeoCarController : MonoBehaviour
     float driftingAxis;
     float localVelocityZ;
     float localVelocityX;
-    bool deceleratingCar;
+    bool deceleratingCar = false;
     bool touchControlsSetup = false;
     /*
     The following variables are used to store information about sideways friction of the wheels (such as

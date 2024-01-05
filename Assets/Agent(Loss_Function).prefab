@@ -292,8 +292,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 0
-  maxDistance: 100
+  maxDistance: 5
   minDistance: 0
+  smoothTime: 0.3
 --- !u!1 &1610895263284692596
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,7 +313,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1610895263284692597
 RectTransform:
   m_ObjectHideFlags: 0
@@ -440,8 +441,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 0
-  maxDistance: 100
+  maxDistance: 5
   minDistance: 0
+  smoothTime: 0.3
 --- !u!1 &1610895263464256950
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,8 +489,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 0
-  maxDistance: 100
+  maxDistance: 5
   minDistance: 0
+  smoothTime: 0.3
 --- !u!1 &1610895263679306875
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,8 +537,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 0
-  maxDistance: 100
+  maxDistance: 5
   minDistance: 0
+  smoothTime: 0.3
 --- !u!1 &1610895264025387362
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,8 +585,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 0
-  maxDistance: 100
+  maxDistance: 5
   minDistance: 0
+  smoothTime: 0.3
 --- !u!1 &1610895264336580940
 GameObject:
   m_ObjectHideFlags: 0
@@ -763,8 +768,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 0
-  maxDistance: 100
+  maxDistance: 5
   minDistance: 0
+  smoothTime: 0.3
 --- !u!1 &1610895265038335381
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,8 +816,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 0
-  maxDistance: 100
+  maxDistance: 5
   minDistance: 0
+  smoothTime: 0.3
 --- !u!1 &1610895265355227744
 GameObject:
   m_ObjectHideFlags: 0
@@ -857,8 +864,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 0
-  maxDistance: 100
+  maxDistance: 5
   minDistance: 0
+  smoothTime: 0.3
 --- !u!1 &1916956075685260538
 GameObject:
   m_ObjectHideFlags: 0
@@ -920,7 +928,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
 --- !u!114 &1329608702547860847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -992,7 +1000,7 @@ MonoBehaviour:
   sensorRightfront: {fileID: 1610895263464256948}
   sensorLeftback: {fileID: 1610895263679306873}
   sensorRightback: {fileID: 1610895265355227750}
-  lossUIText: {fileID: 1610895264336580930}
+  currentGenome: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   sensorValues:
   - 0
   - 0
@@ -1026,12 +1034,7 @@ MonoBehaviour:
   wheelFrontRight: {fileID: 4199369527798645498}
   wheelBackLeft: {fileID: 5254255765105986534}
   wheelBackRight: {fileID: 3966541949969278149}
-  wheelFrontLeftTarget: {fileID: 0}
-  wheelFrontRightTarget: {fileID: 0}
-  wheelBackLeftTarget: {fileID: 0}
-  wheelBackRightTarget: {fileID: 0}
-  isRandomGenome: 0
-  loss: 0
+  FITNESSVALUE: 0
   engineMuscleSignal: 0
   steeringWheelMuscleSignal: 0
 --- !u!1 &2038103759210352093

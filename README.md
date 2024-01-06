@@ -30,8 +30,8 @@ Iteration: Repeat steps 2 to 5 until a stopping condition is met, such as reachi
 # How to Run:
 1. Download the repository
 2. Open Scenes/Parallel Parking.unity scene
-3. Set the simulation setting you desire
-4. Copy the best genome into AgentOptimal
+3. Set the simulation setting you desire and run it.
+4. After training, Copy the best genome into AgentOptimal for testing.
 
 Credit:
 3D Model: https://assetstore.unity.com/packages/3d/vehicles/land/arcade-free-racing-car-161085#publisher

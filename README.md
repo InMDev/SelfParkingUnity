@@ -12,11 +12,11 @@ Using Genetic Evolutionary Algorithm for self parallel parking in Unity from scr
 7. Paste the Genome into a fresh model for testing
 
 ## HyperParameters
-⏰ Agent Life time
-👾 Mutation probability, %
-💪 Long-living champions, %
-👩‍👨‍👧‍👦 Max Group size
-📅 Max number of generations
+- ⏰ Agent Life time
+- 👾 Mutation probability, %
+- 💪 Long-living champions, %
+- 👩‍👨‍👧‍👦 Max Group size
+- 📅 Max number of generations
 
 # Genetic Algorithm (GA)
 1. Initialization: Create diverse sets of genes representing 9 initial weights for engine and steering (Both in 10-bit structure: 1 sign bit, 4 exponent bits, and 5 mantissa bits).

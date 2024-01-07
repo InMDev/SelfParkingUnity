@@ -292,7 +292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 0
-  maxDistance: 5
+  maxDistance: 100
   minDistance: 0
   smoothTime: 0.3
 --- !u!1 &1610895263284692596
@@ -441,7 +441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 0
-  maxDistance: 5
+  maxDistance: 100
   minDistance: 0
   smoothTime: 0.3
 --- !u!1 &1610895263464256950
@@ -489,7 +489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 0
-  maxDistance: 5
+  maxDistance: 100
   minDistance: 0
   smoothTime: 0.3
 --- !u!1 &1610895263679306875
@@ -537,7 +537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 0
-  maxDistance: 5
+  maxDistance: 100
   minDistance: 0
   smoothTime: 0.3
 --- !u!1 &1610895264025387362
@@ -585,7 +585,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 0
-  maxDistance: 5
+  maxDistance: 100
   minDistance: 0
   smoothTime: 0.3
 --- !u!1 &1610895264336580940
@@ -768,7 +768,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 0
-  maxDistance: 5
+  maxDistance: 100
   minDistance: 0
   smoothTime: 0.3
 --- !u!1 &1610895265038335381
@@ -816,7 +816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 0
-  maxDistance: 5
+  maxDistance: 100
   minDistance: 0
   smoothTime: 0.3
 --- !u!1 &1610895265355227744
@@ -864,7 +864,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 0
-  maxDistance: 5
+  maxDistance: 100
   minDistance: 0
   smoothTime: 0.3
 --- !u!1 &1916956075685260538
@@ -950,7 +950,7 @@ MonoBehaviour:
   steeringSpeed: 1
   brakeForce: 450
   decelerationMultiplier: 1
-  handbrakeDriftMultiplier: 5
+  handbrakeDriftMultiplier: 1
   bodyMassCenter: {x: 0, y: 0, z: 0}
   frontLeftMesh: {fileID: 7670858016519129992}
   frontLeftCollider: {fileID: 965836369978743957}

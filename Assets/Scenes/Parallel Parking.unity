@@ -454,7 +454,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 157117242}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.8399992, y: -0.010000229, z: 1.6700001}
+  m_LocalPosition: {x: -2.8399992, y: -0.010000229, z: 7.6532183}
   m_LocalScale: {x: 0.36834928, y: 0.068053, z: 0.4808546}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -926,7 +926,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 499992753}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.8399992, y: -0.010000229, z: -1.52}
+  m_LocalPosition: {x: -2.8399992, y: -0.010000229, z: 4.463218}
   m_LocalScale: {x: 0.36834928, y: 0.068053, z: 0.4808546}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1315,7 +1315,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 582238555}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.804084, y: 15.01421, z: -2.2832186}
+  m_LocalPosition: {x: -7.804084, y: 15.01421, z: 3.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1611,7 +1611,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 757881461}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.339999, y: -0.010000229, z: 1.6600001}
+  m_LocalPosition: {x: -4.339999, y: -0.010000229, z: 7.643218}
   m_LocalScale: {x: 0.36834928, y: 0.068053, z: 0.4808546}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2225,7 +2225,6 @@ GameObject:
   - component: {fileID: 1697935064}
   - component: {fileID: 1697935063}
   - component: {fileID: 1697935062}
-  - component: {fileID: 1697935065}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2292,28 +2291,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1697935061}
   m_LocalRotation: {x: 0.07617599, y: 0.92260814, z: -0.29089737, w: 0.24159937}
-  m_LocalPosition: {x: -19.17, y: 34.92, z: 44.21}
+  m_LocalPosition: {x: -19.77, y: 29.9, z: 47.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 35, y: 150.651, z: 0}
---- !u!114 &1697935065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1697935061}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f6d3ff905719c845a4a6404bc4d4162, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  carTransform: {fileID: 543450653621877418}
-  followSpeed: 2
-  lookSpeed: 5.5
 --- !u!1001 &1735452494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2484,7 +2468,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1750432846}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.339999, y: -0.010000229, z: -1.53}
+  m_LocalPosition: {x: -4.339999, y: -0.010000229, z: 4.4532185}
   m_LocalScale: {x: 0.36834928, y: 0.068053, z: 0.4808546}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2611,7 +2595,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2041572016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2624,11 +2608,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2b6585da012ff54ba8859e7773192c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GENERATION_SIZE: 20
-  LONG_LIVING_CHAMPIONS_PERCENTAGE: 0.8
-  MUTATION_PROBABILITY: 0.6
+  GENERATION_SIZE: 100
+  LONG_LIVING_CHAMPIONS_PERCENTAGE: 0.2
+  MUTATION_PROBABILITY: 0.4
   MAX_GENERATIONS_NUM: 50
-  LIFE_TIME: 25
+  LIFE_TIME: 15
   carPrefab: {fileID: 1916956075685260538, guid: 1c8928a79b157f249a6a7a7a1500781b, type: 3}
 --- !u!4 &2041572017
 Transform:
@@ -2668,11 +2652,6 @@ Transform:
   m_Father: {fileID: 582238556}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &543450653621877418 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1284007241247061568, guid: 1c8928a79b157f249a6a7a7a1500781b, type: 3}
-  m_PrefabInstance: {fileID: 1610895263606148330}
-  m_PrefabAsset: {fileID: 0}
 --- !u!23 &611453169335501186
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3157,7 +3136,7 @@ MonoBehaviour:
   sensorLeftback: {fileID: 1610895263606148338}
   sensorRightback: {fileID: 1610895263606148337}
   lossUIText: {fileID: 1610895263606148336}
-  Genome: 111101111110100011101110111010101011011000111000101000101100000001111011000110101011001000000001100000001010101110010001101100110000101100111011101001001011000011010111101100100111
+  Genome: 
   sensorValues:
   - 0
   - 0

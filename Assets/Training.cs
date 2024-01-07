@@ -41,7 +41,7 @@ public class Training : MonoBehaviour
                 ResetAllCars();
                 yield return new WaitForSeconds(1f);
             }
-            
+
             GenerateCars();
             yield return new WaitForSeconds(LIFE_TIME);
 
@@ -56,7 +56,23 @@ public class Training : MonoBehaviour
         {
             sb.Append(generation[generation.Count - 1].currentGenome[i]);
         }
-        Debug.Log(sb.ToString());
+        Debug.Log("Best:" + sb.ToString());
+    }
+
+    void Update()
+    {
+        //If press space bar, print the best fitness result and the genetic
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("Generation: " + generation.Count);
+            Debug.Log("Fitness: " + generation[generation.Count - 1].fitnessFunction());
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < generation[generation.Count - 1].currentGenome.Length; i++)
+            {
+                sb.Append(generation[generation.Count - 1].currentGenome[i]);
+            }
+            Debug.Log("Current" + sb.ToString());
+        }
     }
 
     /// <summary>
@@ -88,7 +104,7 @@ public class Training : MonoBehaviour
         //Check if generation > number of cars then remove generation to match number of cars
         if (generation.Count > cars.Count)
         {
-            generation.RemoveRange(cars.Count, generation.Count - cars.Count);
+            generation.RemoveRange(cars.Count, generation.Count);
         }
 
         for (int i = 0; i < generation.Count; i++)
@@ -183,7 +199,7 @@ public class Training : MonoBehaviour
         generation.RemoveRange(numToKeep, generation.Count - numToKeep);
 
         int currGenerationSize = generation.Count;
-         
+
         ////Mate the best performing agents
         for (int i = 0; i < currGenerationSize - 1; i++)
         {

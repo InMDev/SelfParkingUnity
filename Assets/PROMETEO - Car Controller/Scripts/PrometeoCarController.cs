@@ -38,8 +38,8 @@ public class PrometeoCarController : MonoBehaviour
     [Space(10)]
     [Range(10, 45)]
     public int maxSteeringAngle = 27; // The maximum angle that the tires can reach while rotating the steering wheel.
-    [Range(0.1f, 1f)]
-    public float steeringSpeed = 0.5f; // How fast the steering wheel turns.
+    [Range(0.1f, 10f)]
+    public float steeringSpeed = 10f; // How fast the steering wheel turns.
     [Space(10)]
     [Range(100, 600)]
     public int brakeForce = 350; // The strength of the wheel brakes.
@@ -500,7 +500,7 @@ public class PrometeoCarController : MonoBehaviour
     //The following method turns the front car wheels to the left. The speed of this movement will depend on the steeringSpeed variable.
     public void TurnLeft()
     {
-        steeringAxis = steeringAxis - (Time.deltaTime * 10f * steeringSpeed);
+        steeringAxis = steeringAxis - (Time.deltaTime * 10f * 150f);
         if (steeringAxis < -1f)
         {
             steeringAxis = -1f;
@@ -513,7 +513,7 @@ public class PrometeoCarController : MonoBehaviour
     //The following method turns the front car wheels to the right. The speed of this movement will depend on the steeringSpeed variable.
     public void TurnRight()
     {
-        steeringAxis = steeringAxis + (Time.deltaTime * 10f * steeringSpeed);
+        steeringAxis = steeringAxis + (Time.deltaTime * 10f * 150f);
         if (steeringAxis > 1f)
         {
             steeringAxis = 1f;

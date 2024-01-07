@@ -325,6 +325,7 @@ public class Agent : MonoBehaviour
     /// </summary>
     void Start()
     {
+
         //Assign private Transform wheelFrontLeftTarget, wheelFrontRightTarget, wheelBackLeftTarget, wheelBackRightTarget; to the wheels
         wheelFrontLeftTarget = GameObject.Find("wheelFrontLeftTarget").transform;
         wheelFrontRightTarget = GameObject.Find("wheelFrontRightTarget").transform;

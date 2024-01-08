@@ -9,7 +9,9 @@ Using Genetic Evolutionary Algorithm for self parallel parking in Unity from scr
 4. Give Brain to the car that takes in the sensor values and outputs the engine & steering wheel strength
 5. Run the Genetic Algorithm (GA) for training and save the best Genome
    ![Alt Text](ReadMeAsset/Generations.gif)
+   ![Alt Text](ReadMeAsset/Training.gif)
 7. Paste the Genome into an empty agent for testing
+   ![Alt Text](ReadMeAsset/bestagent.gif)
 
 ## HyperParameters
 - ⏰ Agent Life time
